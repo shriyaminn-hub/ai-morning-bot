@@ -1,4 +1,3 @@
-
 name: Daily Morning Briefing
 
 on:
@@ -15,12 +14,11 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install requests groq python-dotenv
-      - run: python morning_bot.py
-        
-         env:
-  WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
-  TOMTOM_KEY: ${{ secrets.TOMTOM_KEY }}
-  GROQ_KEY: ${{ secrets.GROQ_KEY }}
-  EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-  EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-  EMAIL_RECEIVER: ${{ secrets.EMAIL_reciever }}
+      - run: python "AI PROJECT.py"
+        env:
+          WEATHER_KEY: ${{ secrets.WEATHER_KEY }}
+          TOMTOM_KEY: ${{ secrets.TOMTOM_KEY }}
+          GROQ_KEY: ${{ secrets.GROQ_KEY }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_RECEIVER: ${{ secrets.EMAIL_reciever}}
