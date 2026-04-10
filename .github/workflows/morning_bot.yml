@@ -21,4 +21,4 @@ jobs:
           GROQ_KEY: ${{ secrets.GROQ_KEY }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          EMAIL_RECEIVER: ${{ secrets.EMAIL_reciever}}
+          EMAIL_reciever: ${{ secrets.EMAIL_reciever}}
