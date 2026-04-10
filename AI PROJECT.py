@@ -2,7 +2,7 @@ import os
 
 ## fetch live weather data 
 import requests
-
+from datetime import datetime
 ### WEATHER API
 api_key =os.environ.get('WEATHER_KEY')
 ## auto detect the city
