@@ -14,7 +14,6 @@ response = requests.get(url)
 data = response.json()
 print(data)
 
-print(geo.json())
 
 temperature = data['main']['temp']
 feels_like = data['main']['feels_like']
