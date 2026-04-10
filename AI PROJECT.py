@@ -107,7 +107,7 @@ app_pass = os.environ.get('EMAIL_PASS')
 
 msg            = MIMEMultipart()
 msg['From']    = sender
-msg['To']      = ','.join(receivers)
+msg['To']      = receivers
 msg['Subject'] = 'AI Morning BRIEFING!'
 
 msg.attach(MIMEText(ai_message, 'plain'))
