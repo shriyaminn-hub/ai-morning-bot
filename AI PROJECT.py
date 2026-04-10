@@ -31,36 +31,22 @@ print(f'todays condition : {weather}')
 
 ### TRAFFIC API
 
-traffic_key = os.environ.get('tomtom_key')
+
 ##auto detection
 city = os.environ.get('CITY')
 lat  = float(os.environ.get('LAT'))
 lon  = float(os.environ.get('LON'))
 
 
-traffic_url = f'https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json'
-params = {'point':f'{lat},{lon}','key':traffic_key}
-
-traffic_response = requests.get(traffic_url,params=params)
-traffic_data = traffic_response.json()
-print(traffic_data)
-
-flow = traffic_data['flowSegmentData']
-current_speed = traffic_data['flowSegmentData']['currentSpeed']
-free_speed = traffic_data['flowSegmentData']['freeFlowSpeed']## when roads are like empty then free flow
-conf = traffic_data['flowSegmentData']['confidence']
-
-percentage = (current_speed / free_speed)*100
-
-if percentage >80:
-    status = 'CLEAR ROADS - 🌷 YOU CAN HEAD OUT AND HAVE A SMOOTH DRIVE YAYYYYY!!!'
-elif percentage >50:
-    status = 'MODERATE TRAFFIC - ⚠️ TRY LEAVING 10 MINS BEFORE'
+hour = datetime.now().hour
+if 7 <= hour <= 10:
+    status = '🚗 Morning rush hour — allow extra 15 mins!'
+elif 17 <= hour <= 20:
+    status = '🚗 Evening rush hour — allow extra 15 mins!'
 else:
-    status = 'HEAVY TRAFFIC - ‼️ TRY LEAVE EARLY OR MAYBE WORK FROM HOME TODAYYYYY OR MAYBE STAY SLEEP'
+    status = '✅ Roads should be clear right now!'
 
-MESSAGE =(f'TRAFFIC : {status} (SPEED :{current_speed}km/h)')
-print(MESSAGE)
+print(f'traffic:{status}')
 
 
 
