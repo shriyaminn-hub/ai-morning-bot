@@ -6,8 +6,8 @@ import requests
 ### WEATHER API
 api_key =os.environ.get('WEATHER_KEY')
 ## auto detect the city
-geo = requests.get('https://freeipapi.com/api/json')
-city = geo.json()['cityName']
+
+city = os.environ.get('CITY')
 print(f'detected city :{city}')
 url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
 response = requests.get(url)
@@ -34,8 +34,11 @@ print(f'todays condition : {weather}')
 
 traffic_key = os.environ.get('tomtom_key')
 ##auto detection
-lon = geo.json()['longitude']
-lat = geo.json()['latitude']
+city = os.environ.get('CITY')
+lat  = float(os.environ.get('LAT'))
+lon  = float(os.environ.get('LON'))
+
+
 traffic_url = f'https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json'
 params = {'point':f'{lat},{lon}','key':traffic_key}
 
