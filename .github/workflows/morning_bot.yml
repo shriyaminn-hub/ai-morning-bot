@@ -22,3 +22,7 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_reciever: ${{ secrets.EMAIL_reciever}}
+          CITY: ${{ secrets.CITY }}
+          LAT : ${{ secrets.LAT }}
+          LON : ${{ secrets.LON }}
+
