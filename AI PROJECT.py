@@ -102,8 +102,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 sender   = os.environ.get('EMAIL_SENDER')
-receivers = os.environ.get('EMAIL_SENDER')
-app_pass = os.environ.get('EMAIL_reciever')
+receivers = os.environ.get('EMAIL_reciever')
+app_pass = os.environ.get('EMAIL_PASS')
 
 msg            = MIMEMultipart()
 msg['From']    = sender
