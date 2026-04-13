@@ -76,7 +76,7 @@ one line about weather and mention the weather and temperature always
 one line about traffic and also tell if there is heavy or moderate or not as well 
 one encouraging sentence to get start their day
 end with a motivational sign off
-and at the end write warm regards shriya sharma
+and at the end write warm regards shriya sharma but write it like at the end of mail with line break after warm regards then shriya
 also make all the sentence in cute aesthetic fonts but easy to read
 
 '''
